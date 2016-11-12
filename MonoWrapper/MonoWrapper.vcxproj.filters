@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="System">
+      <UniqueIdentifier>{c2ab1c28-499d-41b5-aead-23807bef97ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphic">
+      <UniqueIdentifier>{8403870f-7c8f-4072-b863-eeb9b07c3e48}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Stdafx.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MonoTexture.h">
+      <Filter>Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MonoUtils.h" />
+    <ClInclude Include="src\MonoFactory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Stdafx.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="AssemblyInfo.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MonoFactory.cpp" />
+    <ClCompile Include="src\MonoTexture.cpp">
+      <Filter>Graphic</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>System</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

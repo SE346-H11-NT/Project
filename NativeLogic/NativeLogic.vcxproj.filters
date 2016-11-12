@@ -4,15 +4,33 @@
     <Filter Include="CSharpBridge">
       <UniqueIdentifier>{10fbcd0b-6838-4a4f-a80a-e4689ca6135c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameLogic">
+      <UniqueIdentifier>{cd797d00-025a-4551-bac1-8093437437f9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\CSharpBridge\CSharpBridge.h">
+      <Filter>CSharpBridge</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\GameMain.h">
+      <Filter>GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\GameUtils.h">
+      <Filter>GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CSharpBridge\DLLImporter.h">
+      <Filter>CSharpBridge</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CSharpBridge\BridgeUtils.h">
       <Filter>CSharpBridge</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CSharpBridge\CSharpBridge.cpp">
       <Filter>CSharpBridge</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\GameMain.cpp">
+      <Filter>GameLogic</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

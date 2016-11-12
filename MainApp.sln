@@ -12,6 +12,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFramework", "WindowsFramework\WindowsFramework.csproj", "{0F84624E-461E-4AC7-851F-BD2554B25C0E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NativeLogic", "NativeLogic\NativeLogic.vcxproj", "{1A475C86-311F-4122-81FA-11F6133222B7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{302F7C40-4643-44BF-8D81-002936FC1BE1} = {302F7C40-4643-44BF-8D81-002936FC1BE1}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MonoWrapper", "MonoWrapper\MonoWrapper.vcxproj", "{302F7C40-4643-44BF-8D81-002936FC1BE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +64,18 @@ Global
 		{1A475C86-311F-4122-81FA-11F6133222B7}.Release|Win32.Build.0 = Release|Win32
 		{1A475C86-311F-4122-81FA-11F6133222B7}.Release|x86.ActiveCfg = Release|Win32
 		{1A475C86-311F-4122-81FA-11F6133222B7}.Release|x86.Build.0 = Release|Win32
+		{302F7C40-4643-44BF-8D81-002936FC1BE1}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{302F7C40-4643-44BF-8D81-002936FC1BE1}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{302F7C40-4643-44BF-8D81-002936FC1BE1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{302F7C40-4643-44BF-8D81-002936FC1BE1}.Debug|Win32.Build.0 = Debug|Win32
+		{302F7C40-4643-44BF-8D81-002936FC1BE1}.Debug|x86.ActiveCfg = Debug|Win32
+		{302F7C40-4643-44BF-8D81-002936FC1BE1}.Debug|x86.Build.0 = Debug|Win32
+		{302F7C40-4643-44BF-8D81-002936FC1BE1}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{302F7C40-4643-44BF-8D81-002936FC1BE1}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{302F7C40-4643-44BF-8D81-002936FC1BE1}.Release|Win32.ActiveCfg = Release|Win32
+		{302F7C40-4643-44BF-8D81-002936FC1BE1}.Release|Win32.Build.0 = Release|Win32
+		{302F7C40-4643-44BF-8D81-002936FC1BE1}.Release|x86.ActiveCfg = Release|Win32
+		{302F7C40-4643-44BF-8D81-002936FC1BE1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

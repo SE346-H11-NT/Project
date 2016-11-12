@@ -2,10 +2,26 @@
 
 #include <iostream>
 
+#include "../GameLogic/GameMain.h"
 extern "C"
 {
-	void __stdcall update(double deltaTime)
+	CBEXPORT void STDCALL nativeInitialize()
 	{
-		std::printf("Update called: %f", deltaTime);
+		GameMain::initialize();
+	}
+
+	CBEXPORT void STDCALL nativeRelease()
+	{
+		GameMain::release();
+	}
+
+	CBEXPORT void STDCALL nativeUpdate(double deltaTime)
+	{
+		GameMain::getInstance()->update(deltaTime);
+	}
+
+	CBEXPORT void STDCALL nativeDraw()
+	{
+		GameMain::getInstance()->draw();
 	}
 }
