@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using System.Runtime.InteropServices;
+
 using WindowsFramework.Manager;
 using WindowsFramework.Graphic;
 
@@ -12,6 +14,15 @@ namespace MainApp
     /// </summary>
     public class MainApp : Game
     {
+        [DllImport("NativeLogic.dll")]
+        public static extern void nativeInitialize();
+        [DllImport("NativeLogic.dll")]
+        public static extern void nativeRelease();
+        [DllImport("NativeLogic.dll")]
+        public static extern void nativeUpdate(double deltaTime);
+        [DllImport("NativeLogic.dll")]
+        public static extern void nativeDraw();
+
         private WindowsFramework.Manager.GraphicHandler m_graphicHandlerRef;
         private Game m_thisRef;
 
@@ -45,7 +56,8 @@ namespace MainApp
         protected override void LoadContent()
         {
             // TODO: use this.Content to load your game content here
-            m_testingTexture = new MTexture(@"D:\9th term\Monogame\Project\MainApp\Content\bin\Windows\Resource\BillAndLance");
+            nativeInitialize();
+            //m_testingTexture = new MTexture("Resource\\BillAndLance");
         }
 
         /// <summary>
@@ -55,6 +67,7 @@ namespace MainApp
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
+            nativeRelease();
         }
 
         /// <summary>
@@ -68,6 +81,7 @@ namespace MainApp
                 Exit();
 
             // TODO: Add your update logic here
+            nativeUpdate(gameTime.ElapsedGameTime.TotalMilliseconds);
 
             base.Update(gameTime);
         }
@@ -81,7 +95,8 @@ namespace MainApp
             m_graphicHandlerRef.beginDraw();
 
             // TODO: Add your drawing code here
-            m_testingTexture.draw();
+            //m_testingTexture.draw();
+            nativeDraw();
 
             base.Draw(gameTime);
             m_graphicHandlerRef.endDraw();
