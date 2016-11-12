@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApp", "MainApp\MainApp.csproj", "{8722FA20-EA59-4D4F-934B-DDF3C4B033A8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F84624E-461E-4AC7-851F-BD2554B25C0E} = {0F84624E-461E-4AC7-851F-BD2554B25C0E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFramework", "WindowsFramework\WindowsFramework.csproj", "{0F84624E-461E-4AC7-851F-BD2554B25C0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8722FA20-EA59-4D4F-934B-DDF3C4B033A8}.Debug|x86.ActiveCfg = Debug|x86
+		{8722FA20-EA59-4D4F-934B-DDF3C4B033A8}.Debug|x86.Build.0 = Debug|x86
+		{8722FA20-EA59-4D4F-934B-DDF3C4B033A8}.Release|x86.ActiveCfg = Release|x86
+		{8722FA20-EA59-4D4F-934B-DDF3C4B033A8}.Release|x86.Build.0 = Release|x86
+		{0F84624E-461E-4AC7-851F-BD2554B25C0E}.Debug|x86.ActiveCfg = Debug|x86
+		{0F84624E-461E-4AC7-851F-BD2554B25C0E}.Debug|x86.Build.0 = Debug|x86
+		{0F84624E-461E-4AC7-851F-BD2554B25C0E}.Release|x86.ActiveCfg = Release|x86
+		{0F84624E-461E-4AC7-851F-BD2554B25C0E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
