@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using System.Runtime.InteropServices;
+
 using WindowsFramework.Manager;
 using WindowsFramework.Graphic;
 
@@ -12,6 +14,9 @@ namespace MainApp
     /// </summary>
     public class MainApp : Game
     {
+        [DllImport("NativeLogic.dll")]
+        public static extern void update(double deltaTime);
+
         private WindowsFramework.Manager.GraphicHandler m_graphicHandlerRef;
         private Game m_thisRef;
 
@@ -45,7 +50,7 @@ namespace MainApp
         protected override void LoadContent()
         {
             // TODO: use this.Content to load your game content here
-            m_testingTexture = new MTexture(@"D:\9th term\Monogame\Project\MainApp\Content\bin\Windows\Resource\BillAndLance");
+            m_testingTexture = new MTexture("Resource\\BillAndLance");
         }
 
         /// <summary>
@@ -68,6 +73,7 @@ namespace MainApp
                 Exit();
 
             // TODO: Add your update logic here
+            update(gameTime.ElapsedGameTime.TotalMilliseconds);
 
             base.Update(gameTime);
         }

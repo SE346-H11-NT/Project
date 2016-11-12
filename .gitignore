@@ -2,3 +2,7 @@
 /MainApp/obj
 /WindowsFramework/obj
 /WindowsFramework/bin
+/MainApp/Content/obj
+/WindowsFramework/Content
+/Debug
+/NativeLogic/Debug
