@@ -42,6 +42,11 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DataType\MMatrix.cs" />
+    <Compile Include="DataType\MRectangle.cs" />
+    <Compile Include="DataType\MVector2.cs" />
+    <Compile Include="DataType\MVector3.cs" />
+    <Compile Include="DataType\MVector4.cs" />
     <Compile Include="Graphic\MTexture.cs" />
     <Compile Include="Manager\GraphicHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

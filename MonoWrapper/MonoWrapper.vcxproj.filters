@@ -7,6 +7,9 @@
     <Filter Include="Graphic">
       <UniqueIdentifier>{8403870f-7c8f-4072-b863-eeb9b07c3e48}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DataType">
+      <UniqueIdentifier>{a6689b86-b83c-4dd3-a3ab-02bdc96fa945}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -15,11 +18,20 @@
     <ClInclude Include="Stdafx.h">
       <Filter>System</Filter>
     </ClInclude>
-    <ClInclude Include="src\MonoTexture.h">
+    <ClInclude Include="src\DLLFlag.h" />
+    <ClInclude Include="include\DLLFlag.h" />
+    <ClInclude Include="include\MonoTexture.h">
       <Filter>Graphic</Filter>
     </ClInclude>
-    <ClInclude Include="src\MonoUtils.h" />
-    <ClInclude Include="src\MonoFactory.h" />
+    <ClInclude Include="include\MonoMatrix.h">
+      <Filter>DataType</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MonoVector.h">
+      <Filter>DataType</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MonoRectangle.h">
+      <Filter>DataType</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stdafx.cpp">
@@ -28,9 +40,17 @@
     <ClCompile Include="AssemblyInfo.cpp">
       <Filter>System</Filter>
     </ClCompile>
-    <ClCompile Include="src\MonoFactory.cpp" />
     <ClCompile Include="src\MonoTexture.cpp">
       <Filter>Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MonoMatrix.cpp">
+      <Filter>DataType</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MonoVector.cpp">
+      <Filter>DataType</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MonoRectangle.cpp">
+      <Filter>DataType</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

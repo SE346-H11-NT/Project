@@ -7,6 +7,78 @@
     <Filter Include="GameLogic">
       <UniqueIdentifier>{cd797d00-025a-4551-bac1-8093437437f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameLogic\Contra">
+      <UniqueIdentifier>{3267395e-899a-41db-8d1c-0e175885ce12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Effect">
+      <UniqueIdentifier>{1d99ce75-d3a1-48a7-ac2e-e89007838d30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object">
+      <UniqueIdentifier>{7c1e835f-7f0d-4294-b87b-0d4e2a0ed50f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Leaf">
+      <UniqueIdentifier>{90a39e6c-d2c8-4b58-bddb-4a254409bcee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Root">
+      <UniqueIdentifier>{0bdad304-fba3-4d52-8610-058f70ff045e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Root\cpp">
+      <UniqueIdentifier>{b9175672-ae20-4f39-ad60-63d1ea142b4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Leaf\Boss">
+      <UniqueIdentifier>{ca1b9a48-4d22-4629-8020-0e08cdc1b01d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Leaf\Boss\Stage01">
+      <UniqueIdentifier>{684a027a-f536-4091-8d7f-82e56b7b7196}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Leaf\Boss\Stage02">
+      <UniqueIdentifier>{50ea416d-b7c3-4348-b738-876ac8d6dec3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Leaf\Boss\Stage03">
+      <UniqueIdentifier>{c3dd3443-0183-41b5-b183-7d244e1e94cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Leaf\Gun">
+      <UniqueIdentifier>{af1e39a3-54a9-4e33-a3d4-6a7c63e3a68d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Leaf\Gun\cpp">
+      <UniqueIdentifier>{a078b0dd-3e40-4288-810f-f6b1219a9d71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Leaf\Map Object">
+      <UniqueIdentifier>{d4e9053f-1fe8-487d-be26-de34666d91ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Leaf\Map Object\cpp">
+      <UniqueIdentifier>{5790813f-acc5-4f7b-a4c0-c9649e66e955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Leaf\Monster">
+      <UniqueIdentifier>{59d542a9-cb1c-4116-bff8-9fb0f5a04270}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Leaf\Monster\cpp">
+      <UniqueIdentifier>{f90ad191-6ca8-42f3-b119-4bbc3d107822}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Game Object\Leaf\Character">
+      <UniqueIdentifier>{65bc9447-9e7b-46ec-a47d-d561e9324e64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Manager">
+      <UniqueIdentifier>{1938ec9c-4bd5-4b39-8ab7-26ef5b9216bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Manager\cpp">
+      <UniqueIdentifier>{4058aed3-ad4c-410d-ba12-bf558b70a22a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Helper">
+      <UniqueIdentifier>{a13cb9e9-4acf-4c08-9dfe-cd5b180f8d8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Generic">
+      <UniqueIdentifier>{28291cd9-5298-428b-883d-74f396a5df3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LibWrapper">
+      <UniqueIdentifier>{aed200cf-8bf1-4a4d-b0ce-46e2f125df28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LibWrapper\cpp">
+      <UniqueIdentifier>{d3971323-e176-4b23-b41d-e54db9cc4b47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Contra\Mathematic">
+      <UniqueIdentifier>{858aaec3-8bdb-4f9d-a367-fd8fd7b0fce6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\CSharpBridge\CSharpBridge.h">
@@ -15,14 +87,263 @@
     <ClInclude Include="src\GameLogic\GameMain.h">
       <Filter>GameLogic</Filter>
     </ClInclude>
-    <ClInclude Include="src\GameLogic\GameUtils.h">
-      <Filter>GameLogic</Filter>
-    </ClInclude>
     <ClInclude Include="src\CSharpBridge\DLLImporter.h">
       <Filter>CSharpBridge</Filter>
     </ClInclude>
     <ClInclude Include="src\CSharpBridge\BridgeUtils.h">
       <Filter>CSharpBridge</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Effect.h">
+      <Filter>GameLogic\Contra\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\EffectManager.h">
+      <Filter>GameLogic\Contra\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\AutoAimingObject.h">
+      <Filter>GameLogic\Contra\Game Object\Root</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\DestroyableObject.h">
+      <Filter>GameLogic\Contra\Game Object\Root</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Mobs.h">
+      <Filter>GameLogic\Contra\Game Object\Root</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\MoveObject.h">
+      <Filter>GameLogic\Contra\Game Object\Root</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Object.h">
+      <Filter>GameLogic\Contra\Game Object\Root</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\ShootObject.h">
+      <Filter>GameLogic\Contra\Game Object\Root</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\BoomingCanon.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage01</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\CrossHair.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage01</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\CrystalOrb.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage02</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\MetalOrb.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage02</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Mouth.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage02</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Tentacle.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage02</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Droid.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage03</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\ExplodeFire.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage03</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\MiniDroid.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage03</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Boss.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Bullet.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\BulletBasic.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\BulletFire.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\BulletLaser.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\BulletMachine.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\BulletSpread.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\FireCircle.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\RedBoom.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\RedSpreadBoom.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\AnimatedPretties.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\BulletFalcon.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\BulletBag.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\ExplodeBridge.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\FloatingBulletBag.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\FloatingRock.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Tile.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Pretties.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\BlueBoom.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\BlueBoomGenerator.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Canon.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\DiveShooter.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\FallingStone.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Fire.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\HiddenSniper.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\RunningMan.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Sniper.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\StandCanon.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\StandShooter.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Tank.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\TankGun.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Character.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\State.h">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\BulletManager.h">
+      <Filter>GameLogic\Contra\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\FreeSound.h">
+      <Filter>GameLogic\Contra\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\FreeText.h">
+      <Filter>GameLogic\Contra\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Map.h">
+      <Filter>GameLogic\Contra\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\QuadTree.h">
+      <Filter>GameLogic\Contra\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Timer.h">
+      <Filter>GameLogic\Contra\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\ScoreManager.h">
+      <Filter>GameLogic\Contra\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Collision.h">
+      <Filter>GameLogic\Contra\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\GameState.h">
+      <Filter>GameLogic\Contra\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Selector.h">
+      <Filter>GameLogic\Contra\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\GameUtils.h">
+      <Filter>GameLogic\Contra\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Generic\GenericDatatype.h">
+      <Filter>GameLogic\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\Camera.h">
+      <Filter>GameLogic\Contra\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\Camera.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\DefaultMethods.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\DefaultStructure.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\SmartPointer.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\SweptAABB.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\T6_ColormapTexture.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\T6_Keyboard.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\T6_MergedTexture.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\T6_Sound.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\T6_Sprite.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\T6_Text.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\T6_Texture.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\T6_Include.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\GameDefaultStructure.h">
+      <Filter>GameLogic\Contra\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GraphicAlgorithms2D\CircleEquation.h">
+      <Filter>GameLogic\Contra\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GraphicAlgorithms2D\Equation.h">
+      <Filter>GameLogic\Contra\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GraphicAlgorithms2D\MathDefaultConstant.h">
+      <Filter>GameLogic\Contra\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GraphicAlgorithms2D\QuadraticEquation.h">
+      <Filter>GameLogic\Contra\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GraphicAlgorithms2D\T6Math.h">
+      <Filter>GameLogic\Contra\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LibWrapper\DefaultConstant.h">
+      <Filter>LibWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameLogic\GameDefaultConstant.h">
+      <Filter>GameLogic\Contra\Helper</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -31,6 +352,216 @@
     </ClCompile>
     <ClCompile Include="src\GameLogic\GameMain.cpp">
       <Filter>GameLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Effect.cpp">
+      <Filter>GameLogic\Contra\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\EffectManager.cpp">
+      <Filter>GameLogic\Contra\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\AutoAimingObject.cpp">
+      <Filter>GameLogic\Contra\Game Object\Root\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\DestroyableObject.cpp">
+      <Filter>GameLogic\Contra\Game Object\Root\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Mobs.cpp">
+      <Filter>GameLogic\Contra\Game Object\Root\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\MoveObject.cpp">
+      <Filter>GameLogic\Contra\Game Object\Root\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Object.cpp">
+      <Filter>GameLogic\Contra\Game Object\Root\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\ShootObject.cpp">
+      <Filter>GameLogic\Contra\Game Object\Root\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\BoomingCanon.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage01</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\CrossHair.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage01</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\CrystalOrb.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage02</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\MetalOrb.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage02</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Mouth.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage02</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Tentacle.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage02</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Droid.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage03</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\ExplodeFire.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage03</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\MiniDroid.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss\Stage03</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Boss.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Bullet.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\BulletBasic.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\BulletFire.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\BulletLaser.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\BulletMachine.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\BulletSpread.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\FireCircle.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\RedBoom.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\RedSpreadBoom.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Gun\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\AnimatedPretties.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\BulletBag.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\BulletFalcon.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\ExplodeBridge.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\FloatingBulletBag.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\FloatingRock.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Pretties.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Tile.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Map Object\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\BlueBoom.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\BlueBoomGenerator.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Canon.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\DiveShooter.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\FallingStone.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Fire.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\HiddenSniper.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\RunningMan.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Sniper.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\StandCanon.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\StandShooter.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Tank.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\TankGun.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Monster\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Character.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\State.cpp">
+      <Filter>GameLogic\Contra\Game Object\Leaf\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\BulletManager.cpp">
+      <Filter>GameLogic\Contra\Manager\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\FreeSound.cpp">
+      <Filter>GameLogic\Contra\Manager\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\FreeText.cpp">
+      <Filter>GameLogic\Contra\Manager\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Map.cpp">
+      <Filter>GameLogic\Contra\Manager\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\QuadTree.cpp">
+      <Filter>GameLogic\Contra\Manager\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\ScoreManager.cpp">
+      <Filter>GameLogic\Contra\Manager\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Timer.cpp">
+      <Filter>GameLogic\Contra\Manager\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\GameState.cpp">
+      <Filter>GameLogic\Contra\Manager\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Selector.cpp">
+      <Filter>GameLogic\Contra\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Camera.cpp">
+      <Filter>GameLogic\Contra\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LibWrapper\Camera.cpp">
+      <Filter>LibWrapper\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LibWrapper\T6_ColormapTexture.cpp">
+      <Filter>LibWrapper\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LibWrapper\T6_Keyboard.cpp">
+      <Filter>LibWrapper\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LibWrapper\T6_MergedTexture.cpp">
+      <Filter>LibWrapper\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LibWrapper\T6_Sound.cpp">
+      <Filter>LibWrapper\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LibWrapper\T6_Sprite.cpp">
+      <Filter>LibWrapper\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LibWrapper\T6_Text.cpp">
+      <Filter>LibWrapper\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LibWrapper\T6_Texture.cpp">
+      <Filter>LibWrapper\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GraphicAlgorithms2D\CircleEquation.cpp">
+      <Filter>GameLogic\Contra\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GraphicAlgorithms2D\QuadraticEquation.cpp">
+      <Filter>GameLogic\Contra\Mathematic</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

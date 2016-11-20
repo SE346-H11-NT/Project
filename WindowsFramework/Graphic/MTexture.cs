@@ -8,6 +8,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using WindowsFramework.Manager;
 
+using WindowsFramework.DataType;
+
 namespace WindowsFramework.Graphic
 {
     public class MTexture
@@ -25,9 +27,31 @@ namespace WindowsFramework.Graphic
             m_texture = m_graphicHandlerRef.loadContent<Texture2D>(path);
         }
 
-        public void draw()
+        public void draw(MVector3 pos, MRectangle srcRect, MVector2 scale,
+            MVector2 translate, MVector3 drawCenter, float angle, MVector4 color)
         {
-            m_graphicHandlerRef.getSpriteBatch().Draw(m_texture, m_graphicHandlerRef.getGameInstance().Window.ClientBounds, Color.White);
+            //m_graphicHandlerRef.getSpriteBatch().Draw(m_texture, m_graphicHandlerRef.getGameInstance().Window.ClientBounds, Color.White);
+            m_graphicHandlerRef.getSpriteBatch()
+                .Draw(
+                m_texture, 
+                pos.getRawVec2(), 
+                srcRect.getRawData(), 
+                color.getColor(), 
+                angle, 
+                drawCenter.getRawVec2(), 
+                scale.getRawData(), 
+                SpriteEffects.None, 
+                0.0f);
+        }
+
+        public int getWidth()
+        {
+            return m_texture.Width;
+        }
+
+        public int getHeight()
+        {
+            return m_texture.Height;
         }
     }
 }

@@ -6,7 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApp", "MainApp\MainApp.csproj", "{8722FA20-EA59-4D4F-934B-DDF3C4B033A8}"
 	ProjectSection(ProjectDependencies) = postProject
 		{0F84624E-461E-4AC7-851F-BD2554B25C0E} = {0F84624E-461E-4AC7-851F-BD2554B25C0E}
-		{1A475C86-311F-4122-81FA-11F6133222B7} = {1A475C86-311F-4122-81FA-11F6133222B7}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFramework", "WindowsFramework\WindowsFramework.csproj", "{0F84624E-461E-4AC7-851F-BD2554B25C0E}"

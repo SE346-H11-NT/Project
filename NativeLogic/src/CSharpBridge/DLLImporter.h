@@ -2,31 +2,20 @@
 #define __DLL_IMPORTER__
 
 #include "BridgeUtils.h"
-//#pragma comment(lib,"MonoWrapper.lib")
 
-namespace MonoWrapper {
-	namespace Graphic
-	{
-		class CBIMPORT MonoTexture
-		{
-		public:
-			MonoTexture(const char* path);
-			~MonoTexture();
-
-			// TODO: merge param with T6Texture
-			void draw();
-		};
-	}
-
-	class CBIMPORT MonoFactory
-	{
-	public:
-		static Graphic::MonoTexture* STDCALL createMonoTexture(const char* str);
-		static void STDCALL destroyMonoTexture(Graphic::MonoTexture* instance);
-	};
-}
-
-#define NativeFactory MonoWrapper::MonoFactory
+// MONO INCLUDE
+#include "MonoTexture.h"
 #define NativeTexture MonoWrapper::Graphic::MonoTexture
+
+#include "MonoMatrix.h"
+#define NativeMatrix MonoWrapper::DataType::MonoMatrix
+
+#include "MonoVector.h"
+#define NativeVec2 MonoWrapper::DataType::MonoVector2
+#define NativeVec3 MonoWrapper::DataType::MonoVector3
+#define NativeVec4 MonoWrapper::DataType::MonoVector4
+
+#include "MonoRectangle.h"
+#define NativeRect MonoWrapper::DataType::MonoRectangle
 
 #endif // !__DLL_IMPORTER__
