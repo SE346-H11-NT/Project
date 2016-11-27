@@ -24,7 +24,7 @@ extern "C"
 				~MonoTexture();
 
 				// TODO: merge param with T6Texture
-				void draw(DataType::MonoVector3 pos, DataType::MonoRectangle srcRect, DataType::MonoVector2 scale,
+				void draw(DataType::MonoVector3 pos, DataType::MonoRectangle* srcRect, DataType::MonoVector2 scale,
 					DataType::MonoVector2 translate, DataType::MonoVector3 drawCenter, float angle, DataType::MonoVector4 color);
 				const int getWidth() const;
 				const int getHeight() const;

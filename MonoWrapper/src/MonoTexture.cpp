@@ -15,12 +15,12 @@ MonoWrapper::Graphic::MonoTexture::~MonoTexture()
 	SAFE_DEL_ROOT(m_texture);
 }
 
-void MonoWrapper::Graphic::MonoTexture::draw(DataType::MonoVector3 pos, DataType::MonoRectangle srcRect, DataType::MonoVector2 scale,
+void MonoWrapper::Graphic::MonoTexture::draw(DataType::MonoVector3 pos, DataType::MonoRectangle* srcRect, DataType::MonoVector2 scale,
 	DataType::MonoVector2 translate, DataType::MonoVector3 drawCenter, float angle, DataType::MonoVector4 color)
 {
 	m_texture->draw(
 		pos.getRawData(), 
-		srcRect.getRawData(), 
+		srcRect != nullptr ? srcRect->getRawData() : nullptr,
 		scale.getRawData(), 
 		translate.getRawData(), 
 		drawCenter.getRawData(), 

@@ -31,11 +31,22 @@ namespace WindowsFramework.Graphic
             MVector2 translate, MVector3 drawCenter, float angle, MVector4 color)
         {
             //m_graphicHandlerRef.getSpriteBatch().Draw(m_texture, m_graphicHandlerRef.getGameInstance().Window.ClientBounds, Color.White);
+
+            Rectangle? rect;
+            if (srcRect.Equals(null))
+            {
+                rect = srcRect.getRawData();
+            }
+            else
+            {
+                rect = null;
+            }
+
             m_graphicHandlerRef.getSpriteBatch()
                 .Draw(
                 m_texture, 
-                pos.getRawVec2(), 
-                srcRect.getRawData(), 
+                pos.getRawVec2(),
+                rect,
                 color.getColor(), 
                 angle, 
                 drawCenter.getRawVec2(), 

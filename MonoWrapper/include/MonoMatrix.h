@@ -18,6 +18,8 @@ extern "C"
 			{
 			public:
 				MonoMatrix();
+				MonoMatrix(const MonoMatrix& mat);
+				MonoMatrix(int id);
 				~MonoMatrix();
 
 				MonoMatrix operator*(const MonoMatrix& mat) const;
@@ -25,14 +27,8 @@ extern "C"
 				static void translation(MonoMatrix* outMat, float tx, float ty, float tz);
 				static void indentity(MonoMatrix* outMat);
 
-#if defined(MONO_API_EXPORT)
-			public:
-				MonoMatrix(const gcroot<WindowsFramework::DataType::MMatrix^>& mat);
-				gcroot<WindowsFramework::DataType::MMatrix^> getRawData() const;
-
 			private:
-				gcroot<WindowsFramework::DataType::MMatrix^>	m_matrix;
-#endif
+				int m_ID;
 			};
 }
 	}

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,18 +10,63 @@ namespace WindowsFramework.DataType
 {
     public class MMatrix
     {
-        private Microsoft.Xna.Framework.Matrix m_matrix;
+        private static Dictionary<int, MMatrix> m_storage = new Dictionary<int,MMatrix>();
+        private static int m_IDCounter = 0;
+
+        public  Microsoft.Xna.Framework.Matrix m_matrix;
+        public int m_ID;
 
         public MMatrix()
         {
             m_matrix = new Matrix();
             m_matrix = Matrix.Identity;
+            MMatrix instance = this;
+            addMatrix(ref instance);
         }
 
         public MMatrix(MMatrix mat)
         {
             m_matrix = new Matrix();
             m_matrix = mat.m_matrix;
+            MMatrix instance = this;
+            addMatrix(ref instance);
+        }
+
+        public static int createMatrix()
+        {
+            MMatrix instance = new MMatrix();
+            return instance.m_ID;
+        }
+
+        public static int createCopyMatrix(int ID)
+        {
+            MMatrix instance = new MMatrix();
+            instance.m_matrix = getMatrix(ID).m_matrix;
+            return instance.m_ID;
+        }
+
+        public static void destroyMatrix(int ID)
+        {
+            if (m_storage.ContainsKey(ID))
+            {
+                m_storage.Remove(ID);
+            }
+        }
+
+        private static void addMatrix(ref MMatrix mat)
+        {
+            while (m_storage.ContainsKey(m_IDCounter))
+            {
+                m_IDCounter = (m_IDCounter + 1) % int.MaxValue;
+            }
+
+            m_storage.Add(m_IDCounter, mat);
+            mat.m_ID = m_IDCounter;
+        }
+
+        public static MMatrix getMatrix(int ID)
+        {
+            return m_storage[ID];
         }
 
         public MMatrix multiply(MMatrix mat)

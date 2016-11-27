@@ -22,17 +22,18 @@ namespace MonoWrapper
 
 		MonoWrapper::DataType::MonoVector3 MonoVector3::operator*(const MonoMatrix& mat)
 		{
-			return (m_rawData->multiply(mat.getRawData()));
+			return MonoVector3();
+			//return (m_rawData->multiply(mat.getRawData()));
 		}
 
 		void MonoVector3::createVectorAndMultiplyToMatrix(float& x, float& y, float& z, const MonoMatrix& mat)
 		{
-			gcroot<WindowsFramework::DataType::MVector3^> result = gcnew WindowsFramework::DataType::MVector3(x, y, z);
-			result = result->multiply(mat.getRawData());
-			x = result->getX();
-			y = result->getY();
-			z = result->getZ();
-			SAFE_DEL_ROOT(result);
+			//gcroot<WindowsFramework::DataType::MVector3^> result = gcnew WindowsFramework::DataType::MVector3(x, y, z);
+			//result = result->multiply(mat.getRawData());
+			//x = result->getX();
+			//y = result->getY();
+			//z = result->getZ();
+			//SAFE_DEL_ROOT(result);
 		}
 
 		MonoVector4::MonoVector4(float x, float y, float z, float w)
