@@ -9,7 +9,7 @@ namespace MonoWrapper
 
 		MonoRectangle::MonoRectangle(int left, int top, int right, int bottom)
 		{
-			m_rawData = gcnew WindowsFramework::DataType::MRectangle(left, top, right, bottom);
+			m_ID = WindowsFramework::DataType::MRectangle::create(left, top, right, bottom);
 		}
 	}
 }

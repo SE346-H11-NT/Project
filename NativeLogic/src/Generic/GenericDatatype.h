@@ -219,6 +219,11 @@ struct T6Rect
 	{
 		return NativeRect(left, top, right, bottom);
 	}
+
+	int getID()
+	{
+		return NativeRect(left, top, right, bottom).getID();
+	}
 };
 
 template <unsigned int VectorSize>
@@ -294,6 +299,11 @@ struct T6Vec2
 	NativeVec2	getNativeVector()
 	{
 		return NativeVec2(x, y);
+	}
+
+	int getID()
+	{
+		return NativeVec2(x, y).getID();
 	}
 };
 
@@ -397,6 +407,11 @@ struct T6Vec3
 	{
 		return NativeVec3(x, y, z);
 	}
+
+	int getID()
+	{
+		return NativeVec3(x, y, z).getID();
+	}
 };
 
 struct T6Vec4
@@ -436,6 +451,11 @@ struct T6Vec4
 	NativeVec4	getNativeVector()
 	{
 		return NativeVec4(x, y, z, w);
+	}
+
+	int getID()
+	{
+		return NativeVec4(x, y, z, w).getID();
 	}
 };
 

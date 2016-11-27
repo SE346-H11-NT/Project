@@ -16,7 +16,7 @@ namespace WindowsFramework.DataType
         public  Microsoft.Xna.Framework.Matrix m_matrix;
         public int m_ID;
 
-        public MMatrix()
+        private MMatrix()
         {
             m_matrix = new Matrix();
             m_matrix = Matrix.Identity;
@@ -24,7 +24,7 @@ namespace WindowsFramework.DataType
             addMatrix(ref instance);
         }
 
-        public MMatrix(MMatrix mat)
+        private MMatrix(MMatrix mat)
         {
             m_matrix = new Matrix();
             m_matrix = mat.m_matrix;
@@ -66,7 +66,14 @@ namespace WindowsFramework.DataType
 
         public static MMatrix getMatrix(int ID)
         {
-            return m_storage[ID];
+            if (m_storage.ContainsKey(ID))
+            {
+                return m_storage[ID];
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public MMatrix multiply(MMatrix mat)

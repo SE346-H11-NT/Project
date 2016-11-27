@@ -189,12 +189,12 @@ void T6_Texture::drawImage(T6Vec3 pos /*= T6Vec3(0, 0, 0.5)*/,
 
 	angle = ANGLE_TO_RADIAN(angle);
 
-	texture_->draw(pos.getNativeVector(), 
-		srcRect != nullptr ? &srcRect->getNativeRect() : nullptr,
-		scale.getNativeVector(), 
-		translate.getNativeVector(), 
-		drawCenter.getNativeVector(), 
-		angle, color.getNativeVector());
+	texture_->draw(pos.getID(), 
+		srcRect != nullptr ? srcRect->getID() : -1,
+		scale.getID(),
+		translate.getID(),
+		drawCenter.getID(),
+		angle, color.getID());
 }
 
 

@@ -14,28 +14,80 @@ namespace WindowsFramework.Graphic
 {
     public class MTexture
     {
-        private Texture2D m_texture;
-        static private GraphicHandler m_graphicHandlerRef;
+        private static GraphicHandler m_graphicHandlerRef;
+        private static Dictionary<int, MTexture> m_storage = new Dictionary<int, MTexture>();
+        private static int m_IDCounter = 0;
 
+        private Texture2D m_texture;
+        public int m_ID;
+        
         static public void setGraphicHandler(ref GraphicHandler handler)
         {
             m_graphicHandlerRef = handler;
         }
 
-        public MTexture(string path)
+        private MTexture()
         {
-            m_texture = m_graphicHandlerRef.loadContent<Texture2D>(path);
+            MTexture instance = this;
+            addToStorage(ref instance);
         }
 
-        public void draw(MVector3 pos, MRectangle srcRect, MVector2 scale,
-            MVector2 translate, MVector3 drawCenter, float angle, MVector4 color)
+        private MTexture(string path)
+        {
+            m_texture = m_graphicHandlerRef.loadContent<Texture2D>(path);
+            MTexture instance = this;
+            addToStorage(ref instance);
+        }
+        
+        public static int create(string path)
+        {
+            MTexture instance = new MTexture(path);
+            return instance.m_ID;
+        }
+
+        public static int createCopy(int ID)
+        {
+            MTexture instance = new MTexture();
+            instance.m_texture = getFromStorage(ID).m_texture;
+            return instance.m_ID;
+        }
+
+        public static void destroy(int ID)
+        {
+            if (m_storage.ContainsKey(ID))
+            {
+                m_storage.Remove(ID);
+            }
+        }
+
+        private static void addToStorage(ref MTexture tex)
+        {
+            while (m_storage.ContainsKey(m_IDCounter))
+            {
+                m_IDCounter = (m_IDCounter + 1) % int.MaxValue;
+            }
+
+            m_storage.Add(m_IDCounter, tex);
+            tex.m_ID = m_IDCounter;
+        }
+
+        public static MTexture getFromStorage(int ID)
+        {
+            return m_storage[ID];
+        }
+
+        //public void draw(MVector3 pos, MRectangle srcRect, MVector2 scale,
+        //    MVector2 translate, MVector3 drawCenter, float angle, MVector4 color)
+        public static void draw(int textureID, int pos, int srcRect, int scale,
+        int translate, int drawCenter, float angle, int color)
         {
             //m_graphicHandlerRef.getSpriteBatch().Draw(m_texture, m_graphicHandlerRef.getGameInstance().Window.ClientBounds, Color.White);
 
             Rectangle? rect;
-            if (srcRect.Equals(null))
+            MRectangle trueRect = MRectangle.getFromStorage(srcRect);
+            if (trueRect != null)
             {
-                rect = srcRect.getRawData();
+                rect = trueRect.getRawData();
             }
             else
             {
@@ -44,25 +96,25 @@ namespace WindowsFramework.Graphic
 
             m_graphicHandlerRef.getSpriteBatch()
                 .Draw(
-                m_texture, 
-                pos.getRawVec2(),
+                MTexture.getFromStorage(textureID).m_texture,
+                MVector2.getFromStorage(pos).getRawData(),
                 rect,
-                color.getColor(), 
-                angle, 
-                drawCenter.getRawVec2(), 
-                scale.getRawData(), 
+                MVector4.getFromStorage(color).getColor(), 
+                angle,
+                MVector2.getFromStorage(drawCenter).getRawData(),
+                MVector2.getFromStorage(scale).getRawData(), 
                 SpriteEffects.None, 
                 0.0f);
         }
 
-        public int getWidth()
+        public static int getWidth(int ID)
         {
-            return m_texture.Width;
+            return MTexture.getFromStorage(ID).m_texture.Width;
         }
 
-        public int getHeight()
+        public static int getHeight(int ID)
         {
-            return m_texture.Height;
+            return MTexture.getFromStorage(ID).m_texture.Height;
         }
     }
 }

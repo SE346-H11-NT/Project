@@ -12,12 +12,12 @@ namespace MonoWrapper
 
 		MonoVector2::MonoVector2(float x, float y)
 		{
-			m_rawData = gcnew WindowsFramework::DataType::MVector2(x, y);
+			m_ID = WindowsFramework::DataType::MVector2::create(x, y);
 		}
 
 		MonoVector3::MonoVector3(float x, float y, float z)
 		{
-			m_rawData = gcnew WindowsFramework::DataType::MVector3(x, y, z);
+			m_ID = WindowsFramework::DataType::MVector3::create(x, y, z);
 		}
 
 		MonoWrapper::DataType::MonoVector3 MonoVector3::operator*(const MonoMatrix& mat)
@@ -38,7 +38,7 @@ namespace MonoWrapper
 
 		MonoVector4::MonoVector4(float x, float y, float z, float w)
 		{
-			m_rawData = gcnew WindowsFramework::DataType::MVector4(x, y, z, w);
+			m_ID = WindowsFramework::DataType::MVector4::create(x, y, z, w);
 		}
 
 	}

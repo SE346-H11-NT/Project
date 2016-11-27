@@ -24,30 +24,27 @@ extern "C"
 	public:\
 		ClassName();\
 		~ClassName();\
-NOT_EXPORT_CODE(\
 	public:\
-		ClassName(const gcroot <NativeClassName^> rawData);\
-		gcroot <NativeClassName^> getRawData();\
+		ClassName::ClassName(const ClassName& obj);\
+		int getID();\
 	private:\
-		gcroot <NativeClassName^>	m_rawData; \
-)
+		int m_ID;
 
 #define MONO_DEFINATION(ClassName, NativeClassName)	\
 ClassName::ClassName()\
-{\
-	m_rawData = gcnew NativeClassName();\
-}\
+	: m_ID(-1)\
+{}\
 ClassName::~ClassName()\
 {\
-	SAFE_DEL_ROOT(m_rawData);\
+	m_ID = -1;\
 }\
-ClassName::ClassName(const gcroot<NativeClassName^> rawData)\
-	: m_rawData(rawData)\
+ClassName::ClassName(const ClassName& obj)\
 {\
+	m_ID = NativeClassName::createCopy(obj.m_ID);\
 }\
-gcroot<NativeClassName^> ClassName::getRawData()\
+int ClassName::getID()\
 {\
-	return m_rawData;\
+	return m_ID;\
 }
 
 #endif //__DLLFLAG__
