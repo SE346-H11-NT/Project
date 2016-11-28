@@ -40,6 +40,10 @@ extern "C"
 			};
 }
 	}
+	
+#define NativeVec2	WindowsFramework::DataType::MVector2
+#define NativeVec3	WindowsFramework::DataType::MVector3
+#define NativeVec4	WindowsFramework::DataType::MVector4
 }
 
 #endif //__MONOVECTOR3__

@@ -23,9 +23,12 @@ extern "C"
 				~MonoMatrix();
 
 				MonoMatrix operator*(const MonoMatrix& mat) const;
+				int operator=(const MonoMatrix& mat);
 				static void scaling(MonoMatrix* outMat, float sx, float sy, float sz);
 				static void translation(MonoMatrix* outMat, float tx, float ty, float tz);
 				static void indentity(MonoMatrix* outMat);
+
+				int getID() const;
 
 			private:
 				int m_ID;

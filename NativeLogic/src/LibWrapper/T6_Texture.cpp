@@ -102,7 +102,7 @@ void T6_Texture::loadImageFromStoredInfo()
 		cacheTexture = 0;
 	}
 	else {
-		texture_ = new NativeTexture(path_->c_str());
+		texture_ = new WrappedTexture(path_->c_str());
 		loadedTexture_.push_back(new T6_Texture(*this));
 	}
 }

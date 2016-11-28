@@ -13,7 +13,7 @@ Camera::Camera()
 {
 	position_ = POSITION_ZERO;
 	moveDistance_ = POSITION_ZERO;
-	NativeMatrix::indentity(&transform_);
+	WrappedMatrix::indentity(&transform_);
 	state_ = CAMERA_NORMAL;
 }
 
@@ -53,10 +53,10 @@ void Camera::update(T6Vec3 pos, DWORD deltaTime, int cameraAxis)
 T6Matrix4 Camera::getTransform()
 {
 	T6Matrix4 mtScale;
-	NativeMatrix::scaling(&mtScale, 1, -1, 0);
+	WrappedMatrix::scaling(&mtScale, 1, -1, 0);
 
 	T6Matrix4 mtTrans;
-	NativeMatrix::translation(&mtTrans, -(Camera::getInstance()->position_.x),
+	WrappedMatrix::translation(&mtTrans, -(Camera::getInstance()->position_.x),
 		-(Camera::getInstance()->position_.y + RESOLUTION_HEIGHT), 
 		Camera::getInstance()->position_.z);
 

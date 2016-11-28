@@ -30,22 +30,34 @@ namespace MonoWrapper
 
 		MonoMatrix MonoMatrix::operator*(const MonoMatrix& mat) const
 		{
-			return MonoMatrix(NativeMatrix::getMatrix(m_ID)->multiply(NativeMatrix::getMatrix(mat.m_ID))->m_ID);
+			return MonoMatrix();
+			//return MonoMatrix(NativeMatrix::getFromStorage(m_ID)->multiply(mat.m_ID)->m_ID);
 		}
 
 		void MonoMatrix::scaling(MonoMatrix* outMat, float sx, float sy, float sz)
 		{
-			NativeMatrix::getMatrix(outMat->m_ID)->scaling(sx, sy, sz);
+			NativeMatrix::getFromStorage(outMat->m_ID)->scaling(sx, sy, sz);
 		}
 
 		void MonoMatrix::translation(MonoMatrix* outMat, float tx, float ty, float tz)
 		{
-			NativeMatrix::getMatrix(outMat->m_ID)->translation(tx, ty, tz);
+			NativeMatrix::getFromStorage(outMat->m_ID)->translation(tx, ty, tz);
 		}
 
 		void MonoMatrix::indentity(MonoMatrix* outMat)
 		{
-			NativeMatrix::getMatrix(outMat->m_ID)->identity();
+			NativeMatrix::getFromStorage(outMat->m_ID)->identity();
+		}
+
+		int MonoMatrix::getID() const
+		{
+			return m_ID;
+		}
+
+		int MonoMatrix::operator=(const MonoMatrix& mat)
+		{
+			m_ID = NativeMatrix::createCopyMatrix(mat.m_ID);
+			return m_ID;
 		}
 
 	}

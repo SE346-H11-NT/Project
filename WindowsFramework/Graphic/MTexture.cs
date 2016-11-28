@@ -97,11 +97,11 @@ namespace WindowsFramework.Graphic
             m_graphicHandlerRef.getSpriteBatch()
                 .Draw(
                 MTexture.getFromStorage(textureID).m_texture,
-                MVector2.getFromStorage(pos).getRawData(),
+                MVector3.getFromStorage(pos).getRawVec2(),
                 rect,
                 MVector4.getFromStorage(color).getColor(), 
                 angle,
-                MVector2.getFromStorage(drawCenter).getRawData(),
+                MVector3.getFromStorage(drawCenter).getRawVec2(),
                 MVector2.getFromStorage(scale).getRawData(), 
                 SpriteEffects.None, 
                 0.0f);

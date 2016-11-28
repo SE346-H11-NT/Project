@@ -12,12 +12,12 @@ namespace MonoWrapper
 
 		MonoVector2::MonoVector2(float x, float y)
 		{
-			m_ID = WindowsFramework::DataType::MVector2::create(x, y);
+			m_ID = NativeVec2::create(x, y);
 		}
 
 		MonoVector3::MonoVector3(float x, float y, float z)
 		{
-			m_ID = WindowsFramework::DataType::MVector3::create(x, y, z);
+			m_ID = NativeVec3::create(x, y, z);
 		}
 
 		MonoWrapper::DataType::MonoVector3 MonoVector3::operator*(const MonoMatrix& mat)
@@ -28,12 +28,13 @@ namespace MonoWrapper
 
 		void MonoVector3::createVectorAndMultiplyToMatrix(float& x, float& y, float& z, const MonoMatrix& mat)
 		{
-			//gcroot<WindowsFramework::DataType::MVector3^> result = gcnew WindowsFramework::DataType::MVector3(x, y, z);
-			//result = result->multiply(mat.getRawData());
-			//x = result->getX();
-			//y = result->getY();
-			//z = result->getZ();
-			//SAFE_DEL_ROOT(result);
+			int holdingID = NativeVec3::create(x, y, z);
+			int resultID = NativeVec3::getFromStorage(holdingID)->multiply(mat.getID());
+			x = NativeVec3::getFromStorage(resultID)->getX();
+			y = NativeVec3::getFromStorage(resultID)->getY();
+			z = NativeVec3::getFromStorage(resultID)->getZ();
+			NativeVec3::destroy(holdingID);
+			NativeVec3::destroy(resultID);
 		}
 
 		MonoVector4::MonoVector4(float x, float y, float z, float w)

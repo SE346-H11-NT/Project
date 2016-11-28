@@ -7,7 +7,7 @@
 
 GameMain* GameMain::m_instance = nullptr;
 
-NativeTexture* testTexture = nullptr;
+WrappedTexture* testTexture = nullptr;
 
 GameMain::GameMain()
 {

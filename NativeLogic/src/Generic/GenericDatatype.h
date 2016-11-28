@@ -215,14 +215,14 @@ struct T6Rect
 {
 	int left, top, right, bottom;
 
-	NativeRect	getNativeRect()
+	WrappedRect	getNativeRect()
 	{
-		return NativeRect(left, top, right, bottom);
+		return WrappedRect(left, top, right, bottom);
 	}
 
 	int getID()
 	{
-		return NativeRect(left, top, right, bottom).getID();
+		return WrappedRect(left, top, right, bottom).getID();
 	}
 };
 
@@ -296,14 +296,14 @@ struct T6Vec2
 		return T6Vec2(-x, -y);
 	}
 
-	NativeVec2	getNativeVector()
+	WrappedVec2	getNativeVector()
 	{
-		return NativeVec2(x, y);
+		return WrappedVec2(x, y);
 	}
 
 	int getID()
 	{
-		return NativeVec2(x, y).getID();
+		return WrappedVec2(x, y).getID();
 	}
 };
 
@@ -375,17 +375,17 @@ struct T6Vec3
 		return *this;
 	}
 
-	T6Vec3 operator * (const NativeMatrix& mat) const
+	T6Vec3 operator * (const WrappedMatrix& mat) const
 	{
 		T6Vec3 result(x, y, z);
-		NativeVec3::createVectorAndMultiplyToMatrix(result.x, result.y, result.z, mat);
+		WrappedVec3::createVectorAndMultiplyToMatrix(result.x, result.y, result.z, mat);
 		return result;
 	}
 
-	T6Vec3 operator *= (const NativeMatrix& mat)
+	int operator *= (const WrappedMatrix& mat)
 	{
-		NativeVec3::createVectorAndMultiplyToMatrix(x, y, z, mat);
-		return *this;
+		WrappedVec3::createVectorAndMultiplyToMatrix(x, y, z, mat);
+		return this->getID();
 	}
 
 	bool operator== (const T6Vec3& vec) const
@@ -403,14 +403,14 @@ struct T6Vec3
 		return T6Vec3(-x, -y, -z);
 	}
 
-	NativeVec3	getNativeVector()
+	WrappedVec3	getNativeVector()
 	{
-		return NativeVec3(x, y, z);
+		return WrappedVec3(x, y, z);
 	}
 
 	int getID()
 	{
-		return NativeVec3(x, y, z).getID();
+		return WrappedVec3(x, y, z).getID();
 	}
 };
 
@@ -448,18 +448,18 @@ struct T6Vec4
 	{
 	}
 
-	NativeVec4	getNativeVector()
+	WrappedVec4	getNativeVector()
 	{
-		return NativeVec4(x, y, z, w);
+		return WrappedVec4(x, y, z, w);
 	}
 
 	int getID()
 	{
-		return NativeVec4(x, y, z, w).getID();
+		return WrappedVec4(x, y, z, w).getID();
 	}
 };
 
-typedef	NativeMatrix	T6Matrix4;
+typedef	WrappedMatrix	T6Matrix4;
 typedef T6Vec4			T6Color;
 #endif
 #endif // __GENERIC_DATA_TYPE__

@@ -41,7 +41,7 @@ namespace WindowsFramework.DataType
         public static int createCopyMatrix(int ID)
         {
             MMatrix instance = new MMatrix();
-            instance.m_matrix = getMatrix(ID).m_matrix;
+            instance.m_matrix = getFromStorage(ID).m_matrix;
             return instance.m_ID;
         }
 
@@ -64,7 +64,7 @@ namespace WindowsFramework.DataType
             mat.m_ID = m_IDCounter;
         }
 
-        public static MMatrix getMatrix(int ID)
+        public static MMatrix getFromStorage(int ID)
         {
             if (m_storage.ContainsKey(ID))
             {
@@ -76,11 +76,11 @@ namespace WindowsFramework.DataType
             }
         }
 
-        public MMatrix multiply(MMatrix mat)
+        public int multiply(int matID)
         {
             MMatrix result = new MMatrix();
-            result.m_matrix = m_matrix * mat.m_matrix;
-            return result;
+            result.m_matrix = m_matrix * MMatrix.getFromStorage(matID).m_matrix;
+            return result.m_ID;
         }
 
         public Microsoft.Xna.Framework.Matrix getRawData()

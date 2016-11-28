@@ -88,11 +88,11 @@ namespace WindowsFramework.DataType
             }
         }
 
-        public MVector3 multiply(MMatrix mat)
+        public int multiply(int matID)
         {
             MVector3 result = new MVector3();
-            result.m_vector = Vector3.Transform(m_vector, mat.getRawData());
-            return result;
+            result.m_vector = Vector3.Transform(m_vector, MMatrix.getFromStorage(matID).getRawData());
+            return result.m_ID;
         }
 
         public Vector2 getRawVec2()

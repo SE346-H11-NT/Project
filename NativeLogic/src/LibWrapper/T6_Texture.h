@@ -111,7 +111,7 @@ private:
 	static vector<T6_Texture*>	loadedTexture_;
 
 	tstring*			path_;
-	NativeTexture*		texture_;
+	WrappedTexture*		texture_;
 };
 
 #endif
