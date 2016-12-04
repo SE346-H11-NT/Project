@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\DLLFlag.h" />
+    <ClInclude Include="include\MonoKeyboard.h" />
     <ClInclude Include="include\MonoMatrix.h" />
     <ClInclude Include="include\MonoRectangle.h" />
     <ClInclude Include="include\MonoTexture.h" />
@@ -88,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="src\MonoKeyboard.cpp" />
     <ClCompile Include="src\MonoMatrix.cpp" />
     <ClCompile Include="src\MonoRectangle.cpp" />
     <ClCompile Include="src\MonoTexture.cpp" />

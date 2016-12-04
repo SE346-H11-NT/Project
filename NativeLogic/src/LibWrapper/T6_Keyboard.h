@@ -33,10 +33,6 @@ public:
 
 private:
 	bool createKeyboard();
-
-private:
-	BYTE					keyboardStatus_[256];
-	BYTE					keyboardStatusPrevious_[256];
 };
 
 #endif

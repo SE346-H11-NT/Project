@@ -6,7 +6,7 @@
 
 #define ENABLE_TEXT	0
 #define ENABLE_SOUND 0
-#define ENDABLE_CONTROLLER 0
+#define ENDABLE_CONTROLLER 1
 
 #if ENABLE_TEXT
 #define TEXT_CODE(code)	code

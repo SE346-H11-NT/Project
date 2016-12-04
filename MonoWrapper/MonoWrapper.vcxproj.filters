@@ -10,6 +10,9 @@
     <Filter Include="DataType">
       <UniqueIdentifier>{a6689b86-b83c-4dd3-a3ab-02bdc96fa945}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{c1a6b554-0131-436f-8c16-af315250fc0b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -32,6 +35,9 @@
     <ClInclude Include="include\MonoRectangle.h">
       <Filter>DataType</Filter>
     </ClInclude>
+    <ClInclude Include="include\MonoKeyboard.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stdafx.cpp">
@@ -51,6 +57,9 @@
     </ClCompile>
     <ClCompile Include="src\MonoRectangle.cpp">
       <Filter>DataType</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MonoKeyboard.cpp">
+      <Filter>Controller</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

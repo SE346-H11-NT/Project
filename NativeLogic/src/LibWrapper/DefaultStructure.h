@@ -69,7 +69,7 @@ union Vector2{
 
 };
 
-typedef Vector2<long> Size;
+typedef Vector2<double> Size;
 
 typedef unsigned int index_t;
 

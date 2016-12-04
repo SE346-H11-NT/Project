@@ -16,6 +16,7 @@ void GameState::initialize(T6_Keyboard* controler)
 
 	player_ = new Character(DEFAULT_STARTPOINT(0, 0));
 	State::initializeCharacterState(controler_, player_);
+
 	Map::assignPlayer(player_);
 
 	switchState(MainMenu::get());
