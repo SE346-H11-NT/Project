@@ -97,7 +97,7 @@ namespace WindowsFramework.Graphic
             m_graphicHandlerRef.getSpriteBatch()
                 .Draw(
                 MTexture.getFromStorage(textureID).m_texture,
-                MVector3.getFromStorage(pos).getRawVec2(),
+                MVector3.getFromStorage(pos).getRawAxistedVec2(),
                 rect,
                 MVector4.getFromStorage(color).getColor(), 
                 angle,

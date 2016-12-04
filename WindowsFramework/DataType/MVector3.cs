@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 
 using WindowsFramework.DataType;
+using WindowsFramework.Manager;
 
 namespace WindowsFramework.DataType
 {
@@ -98,6 +99,11 @@ namespace WindowsFramework.DataType
         public Vector2 getRawVec2()
         {
             return new Vector2(m_vector.X, m_vector.Y);
+        }
+
+        public Vector2 getRawAxistedVec2()
+        {
+            return new Vector2(m_vector.X, GraphicHandler.BUFFER_HEIGHT - m_vector.Y);
         }
 
         public float getX() { return m_vector.X; }
