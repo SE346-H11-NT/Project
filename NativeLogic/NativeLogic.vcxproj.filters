@@ -282,9 +282,6 @@
     <ClInclude Include="src\GameLogic\Camera.h">
       <Filter>GameLogic\Contra\Manager</Filter>
     </ClInclude>
-    <ClInclude Include="src\LibWrapper\Camera.h">
-      <Filter>LibWrapper</Filter>
-    </ClInclude>
     <ClInclude Include="src\LibWrapper\DefaultMethods.h">
       <Filter>LibWrapper</Filter>
     </ClInclude>
@@ -530,12 +527,6 @@
     <ClCompile Include="src\GameLogic\Selector.cpp">
       <Filter>GameLogic\Contra\Helper</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameLogic\Camera.cpp">
-      <Filter>GameLogic\Contra\Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="src\LibWrapper\Camera.cpp">
-      <Filter>LibWrapper\cpp</Filter>
-    </ClCompile>
     <ClCompile Include="src\LibWrapper\T6_ColormapTexture.cpp">
       <Filter>LibWrapper\cpp</Filter>
     </ClCompile>
@@ -562,6 +553,9 @@
     </ClCompile>
     <ClCompile Include="src\GraphicAlgorithms2D\QuadraticEquation.cpp">
       <Filter>GameLogic\Contra\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameLogic\Camera.cpp">
+      <Filter>GameLogic\Contra\Manager\cpp</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

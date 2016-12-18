@@ -161,7 +161,6 @@
     <ClInclude Include="src\GraphicAlgorithms2D\MathDefaultConstant.h" />
     <ClInclude Include="src\GraphicAlgorithms2D\QuadraticEquation.h" />
     <ClInclude Include="src\GraphicAlgorithms2D\T6Math.h" />
-    <ClInclude Include="src\LibWrapper\Camera.h" />
     <ClInclude Include="src\LibWrapper\DefaultConstant.h" />
     <ClInclude Include="src\LibWrapper\DefaultMethods.h" />
     <ClInclude Include="src\LibWrapper\DefaultStructure.h" />
@@ -241,7 +240,6 @@
     <ClCompile Include="src\GameLogic\Timer.cpp" />
     <ClCompile Include="src\GraphicAlgorithms2D\CircleEquation.cpp" />
     <ClCompile Include="src\GraphicAlgorithms2D\QuadraticEquation.cpp" />
-    <ClCompile Include="src\LibWrapper\Camera.cpp" />
     <ClCompile Include="src\LibWrapper\T6_ColormapTexture.cpp" />
     <ClCompile Include="src\LibWrapper\T6_Keyboard.cpp" />
     <ClCompile Include="src\LibWrapper\T6_MergedTexture.cpp" />

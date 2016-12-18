@@ -103,7 +103,7 @@ namespace WindowsFramework.DataType
 
         public Vector2 getRawAxistedVec2()
         {
-            return new Vector2(m_vector.X, GraphicHandler.BUFFER_HEIGHT - m_vector.Y);
+            return new Vector2(m_vector.X, /*GraphicHandler.BUFFER_HEIGHT -*/ m_vector.Y);
         }
 
         public float getX() { return m_vector.X; }

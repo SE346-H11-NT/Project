@@ -76,6 +76,17 @@ namespace WindowsFramework.Graphic
             return m_storage[ID];
         }
 
+        public static SpriteEffects generateSpriteEffect(ref Vector2 scaleParam)
+        {
+            if(scaleParam.X < 0)
+            {
+                scaleParam.X = -scaleParam.X;
+                return SpriteEffects.FlipHorizontally;
+            }
+
+            return SpriteEffects.None;
+        }
+
         //public void draw(MVector3 pos, MRectangle srcRect, MVector2 scale,
         //    MVector2 translate, MVector3 drawCenter, float angle, MVector4 color)
         public static void draw(int textureID, int pos, int srcRect, int scale,
@@ -94,6 +105,9 @@ namespace WindowsFramework.Graphic
                 rect = null;
             }
 
+            Vector2 scaleParam = MVector2.getFromStorage(scale).getRawData();
+            SpriteEffects sEffect = generateSpriteEffect(ref scaleParam);
+
             m_graphicHandlerRef.getSpriteBatch()
                 .Draw(
                 MTexture.getFromStorage(textureID).m_texture,
@@ -102,8 +116,8 @@ namespace WindowsFramework.Graphic
                 MVector4.getFromStorage(color).getColor(), 
                 angle,
                 MVector3.getFromStorage(drawCenter).getRawVec2(),
-                MVector2.getFromStorage(scale).getRawData(), 
-                SpriteEffects.None, 
+                scaleParam,
+                sEffect, 
                 0.0f);
         }
 

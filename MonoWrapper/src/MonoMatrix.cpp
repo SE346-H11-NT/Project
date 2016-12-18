@@ -30,8 +30,8 @@ namespace MonoWrapper
 
 		MonoMatrix MonoMatrix::operator*(const MonoMatrix& mat) const
 		{
-			return MonoMatrix();
-			//return MonoMatrix(NativeMatrix::getFromStorage(m_ID)->multiply(mat.m_ID)->m_ID);
+			//return MonoMatrix();
+			return MonoMatrix(NativeMatrix::getFromStorage(m_ID)->multiply(mat.m_ID));
 		}
 
 		void MonoMatrix::scaling(MonoMatrix* outMat, float sx, float sy, float sz)
