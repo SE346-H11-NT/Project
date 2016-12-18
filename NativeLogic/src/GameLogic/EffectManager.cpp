@@ -47,11 +47,8 @@ EffectManager& EffectManager::getInstance()
 
 double EffectManager::getExplodeTime()
 {
-	return EFFECT_EXPLODE_FRAME_TIME;
+	return EFFECT_EXPLODE_FRAME_TIME * 3;
 }
-
-
-
 
 void EffectManager::addExplode		(T6Vec3 position, DWORD delayTime /*= 0*/)
 {

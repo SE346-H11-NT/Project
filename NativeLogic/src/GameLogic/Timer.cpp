@@ -8,8 +8,6 @@ Timer* Timer::instance_ = 0;
 
 Timer::Timer()
 {
-	lastTimeSign_ = clock();
-	currentTimeSign_ = lastTimeSign_;
 	prevRoundTime_ = 0;
 	roundCode_ = 0;
 }
@@ -39,25 +37,12 @@ DWORD Timer::getRoundTime()
 	return Timer::getInstance().prevRoundTime_;
 }
 
-
-void Timer::updateTimeSign()
+#define MAX_TIMEROUND_CODE	100
+void Timer::updateTimeSign(clock_t roundTime)
 {
-	clock_t*	lastTimeSign	= &Timer::getInstance().lastTimeSign_;
-	clock_t*	currentTimeSign = &Timer::getInstance().currentTimeSign_;
-	DWORD*		prevRoundTime	= &Timer::getInstance().prevRoundTime_;
-
-	*lastTimeSign		= *currentTimeSign;
-	*currentTimeSign	= clock();
-	*prevRoundTime		= *currentTimeSign - *lastTimeSign;
-	Timer::getInstance().roundCode_ = (Timer::getInstance().roundCode_ + 1) % 100;
+	Timer::getInstance().prevRoundTime_  = roundTime;
+	Timer::getInstance().roundCode_ = (Timer::getInstance().roundCode_ + 1) % MAX_TIMEROUND_CODE;
 }
-
-
-void Timer::updateRoundTime()
-{
-	Timer::getInstance().prevRoundTime_ = (DWORD)(clock() - Timer::getInstance().currentTimeSign_);
-}
-
 
 int Timer::getRoundCode()
 {

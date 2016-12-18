@@ -51,7 +51,7 @@ void Character::update()
 void Character::draw()
 {
 	static DWORD immortalColors[] = { 0xFFFF0000, 0xFF0000FF };
-	static DWORD respawColors[] = { COLOR_NO, 0x00000000 };
+	static DWORD respawColors[] = { COLOR_NO, 0x8F000000 };
 	static int colorIndex = 0;
 	static DWORD timer = 0;
 	static T6_Texture lifeIcon = T6_Texture(CHARACTER_EXTRA_LIFE_RESOURCE_LINK.c_str());

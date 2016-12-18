@@ -48,7 +48,7 @@ void GameMain::release()
 
 void GameMain::update(double deltaTime)
 {
-	Timer::updateTimeSign();
+	Timer::updateTimeSign(MONOTIME_TO_T6TIME(deltaTime));
 
 	GameMain::getInstance()->keyboard_->update();
 	GameState::stateUpdate();

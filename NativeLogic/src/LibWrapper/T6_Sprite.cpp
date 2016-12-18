@@ -22,6 +22,7 @@ T6_Sprite::T6_Sprite(const tchar* spritePath,
 	this->fromLastSwitch_ = 0;
 	this->autoSwitchFrame_ = true;
 	this->switchFrameTime_ = DEFAULT_FRAME_TIME;
+	this->localTimeCode_ = T6_Sprite::getTimeCode_();
 
 	if (nFrame > 0)
 		this->nFrame_ = nFrame;
@@ -147,11 +148,16 @@ bool T6_Sprite::loadSprite()
 // -----------------------------------------------
 bool T6_Sprite::processToNextFrame(double passedGameTime)
 {
-	if (this->fromLastSwitch_ < switchFrameTime_)
-		fromLastSwitch_ += passedGameTime;
-	else {
-		currentFrame_ += switchStep_;
-		fromLastSwitch_ = 1;
+	int timeCode = T6_Sprite::getTimeCode_();
+	if (localTimeCode_ != timeCode)
+	{
+		if (this->fromLastSwitch_ < switchFrameTime_)
+			fromLastSwitch_ += passedGameTime;
+		else {
+			currentFrame_ += switchStep_;
+			fromLastSwitch_ = 1;
+		}
+		localTimeCode_ = timeCode;
 	}
 
 	if (currentFrame_ == currentRenderStopPoint_) {
@@ -375,6 +381,12 @@ void T6_Sprite::setAutoSwitchFrame(bool isOn)
 				return;
 
 		synchronousSpriteList_.push_back(this);
+	}
+	else
+	{
+		FOR(synchronousSpriteList_.size())
+			if (synchronousSpriteList_.at(i) == this)
+				synchronousSpriteList_.erase(synchronousSpriteList_.begin() + i);
 	}
 }
 

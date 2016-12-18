@@ -5,14 +5,14 @@
 
 #include "DefaultConstant.h"
 #include "Camera.h"
+#define MONOTIME_TO_T6TIME(msec)	((clock_t)(msec))
 
 class Timer
 {
 public:
 	static DWORD	getRoundTime();
 	static DWORD	getCameraRoundTime();
-	static void		updateTimeSign();
-	static void		updateRoundTime();
+	static void		updateTimeSign(clock_t roundTime);
 	static int		getRoundCode();
 
 private:
@@ -22,8 +22,6 @@ private:
 
 private:
 	static	Timer*	instance_;
-			clock_t	lastTimeSign_;
-			clock_t	currentTimeSign_;
 			DWORD	prevRoundTime_;
 			int		roundCode_;
 };

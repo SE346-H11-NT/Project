@@ -99,6 +99,7 @@ private:
 	Size	frameSize_;
 	bool	autoSwitchFrame_;
 	int		switchStep_;
+	int		localTimeCode_;
 
 	int		currentRenderStartPoint_;
 	int		currentRenderStopPoint_;

@@ -79,7 +79,7 @@ namespace WindowsFramework.Manager
         public void beginDraw()
         {
             m_graphics.BeginDraw();
-            m_spriteBatch.Begin(SpriteSortMode.Immediate, null, null, null, null, null, m_scale);
+            m_spriteBatch.Begin(SpriteSortMode.Immediate, null, SamplerState.PointClamp, null, null, null, m_scale);
             m_gameInstance.GraphicsDevice.Clear(Color.Black);
         }
 

@@ -32,7 +32,7 @@
 #define SCREEN_WIDTH			1024
 #define SCREEN_HEIGHT			600
 #define DEFAULT_DEPTH			0.0f
-#define DEFAULT_FRAME_TIME		17.0
+#define DEFAULT_FRAME_TIME		40.0
 
 // Specify position in game world displayed on screen.
 #define GAMEPOS_CENTER			(T6Vec3(RESOLUTION_WIDTH / 2.0F,	RESOLUTION_HEIGHT / 2.0F,		DEFAULT_DEPTH))
