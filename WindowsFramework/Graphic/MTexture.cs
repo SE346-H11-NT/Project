@@ -107,11 +107,13 @@ namespace WindowsFramework.Graphic
 
             Vector2 scaleParam = MVector2.getFromStorage(scale).getRawData();
             SpriteEffects sEffect = generateSpriteEffect(ref scaleParam);
+            Vector2 translateParam = MVector3.getFromStorage(pos).getRawAxistedVec2()
+            + MVector2.getFromStorage(translate).getRawData();
 
             m_graphicHandlerRef.getSpriteBatch()
                 .Draw(
                 MTexture.getFromStorage(textureID).m_texture,
-                MVector3.getFromStorage(pos).getRawAxistedVec2(),
+                translateParam,
                 rect,
                 MVector4.getFromStorage(color).getColor(), 
                 angle,
