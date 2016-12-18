@@ -285,7 +285,7 @@ struct T6Vec2
 		};
 	};
 
-	T6Vec2(int ix = 0, int iy = 0)
+	T6Vec2(VECTOR_MEMBER_TYPE ix = 0, VECTOR_MEMBER_TYPE iy = 0)
 		: x(ix)
 		, y(iy)
 	{
