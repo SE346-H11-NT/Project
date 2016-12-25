@@ -4,7 +4,7 @@
 #include "Object.h"
 #include "FreeSound.h"
 
-#define DAMAGE_SOUND	_T("Resource//Soundtrack//Damaged.wav")
+#define DAMAGE_SOUND	_T("Resource//Soundtrack//Damaged")
 
 class DestroyableObject : virtual public Object
 {

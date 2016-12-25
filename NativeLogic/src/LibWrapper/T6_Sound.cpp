@@ -17,9 +17,6 @@ T6_Sound::T6_Sound(const tchar* audioPath)
 
 T6_Sound::~T6_Sound(void)
 {
-#if ENABLE_SOUND
-	soundBuffer_->Stop();
-#endif
 }
 
 
@@ -30,9 +27,9 @@ T6_Sound::~T6_Sound(void)
 bool T6_Sound::loadAudio(const tchar* audioPath_)
 {
 #if ENABLE_SOUND
-#else
-	return true;
+	m_instance.loadAudio(audioPath_);
 #endif
+	return true;
 }
 
 
@@ -43,7 +40,7 @@ bool T6_Sound::loadAudio(const tchar* audioPath_)
 void T6_Sound::play(bool isLoop, DWORD priority)
 {
 #if ENABLE_SOUND
-	return soundBuffer_->Play(0, priority, isLoop & DSBPLAY_LOOPING);
+	m_instance.play(isLoop);
 #endif
 }
 
@@ -55,8 +52,6 @@ void T6_Sound::play(bool isLoop, DWORD priority)
 void T6_Sound::stop()
 {
 #if ENABLE_SOUND
-	HRESULT result = soundBuffer_->Stop();
-	soundBuffer_->SetCurrentPosition(0);
-	return result;
+	m_instance.stop();
 #endif
 }

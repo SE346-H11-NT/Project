@@ -19,6 +19,8 @@
 #include "DefaultConstant.h"
 #include "DefaultStructure.h"
 
+#include "CSharpBridge/DLLImporter.h"
+
 
 // -----------------------------------------------
 // Name: class T6_Sound
@@ -38,6 +40,7 @@ private:
 	bool loadAudio(const tchar* audioPath);
 
 private:
+	WrappedSound	m_instance;
 };
 
 #endif

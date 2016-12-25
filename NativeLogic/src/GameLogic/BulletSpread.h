@@ -6,7 +6,7 @@
 #define BULLET_S_MOVE_SPEED		200
 #define BULLET_S_SPREAD_LEVEL	5
 #define BULLET_S_SPREAD_ANGLE	int spreadAngle[] = {0, -11, 9, -21, 19}
-#define BULLET_S_SOUND			_T("Resource//SoundTrack//S.wav")
+#define BULLET_S_SOUND			_T("Resource//SoundTrack//S")
 
 class BulletSpread : public Bullet
 {

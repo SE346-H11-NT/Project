@@ -57,10 +57,7 @@ FreeSound* FreeSound::get()
 
 void FreeSound::release()
 {
-#if ENABLE_SOUND
-	SAFE_RELEASE(instance_);
-	T6_Sound::releaseSoundClass();
-#endif
+	
 }
 
 void FreeSound::stop(const tchar* soundLink)

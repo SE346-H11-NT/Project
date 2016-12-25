@@ -10,6 +10,9 @@
 #include "MonoText.h"
 #define WrappedText MonoWrapper::Graphic::MonoText
 
+#include "MonoSound.h"
+#define WrappedSound MonoWrapper::Media::MonoSound
+
 #include "MonoKeyboard.h"
 #define WrappedKeyboard MonoWrapper::Controller::MonoKeyboard
 

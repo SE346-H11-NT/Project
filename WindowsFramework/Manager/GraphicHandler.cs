@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 using WindowsFramework.Graphic;
+using WindowsFramework.Media;
 
 namespace WindowsFramework.Manager
 {
@@ -94,6 +95,7 @@ namespace WindowsFramework.Manager
             m_thisRef = this;
             MTexture.setGraphicHandler(ref m_thisRef);
             MText.setGraphicHandler(ref m_thisRef);
+            MSound.setDeviceHandler(ref m_thisRef);
         }
 
         static GraphicHandler m_instance = null;

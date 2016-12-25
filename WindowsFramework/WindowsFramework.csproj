@@ -51,6 +51,7 @@
     <Compile Include="Graphic\MText.cs" />
     <Compile Include="Graphic\MTexture.cs" />
     <Compile Include="Manager\GraphicHandler.cs" />
+    <Compile Include="Media\MSound.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

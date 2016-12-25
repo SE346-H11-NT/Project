@@ -3,7 +3,7 @@
 
 #include "Bullet.h"
 
-#define BULLET_M_SOUND			_T("Resource//SoundTrack//M.wav")
+#define BULLET_M_SOUND			_T("Resource//SoundTrack//M")
 
 class BulletMachine : public Bullet
 {

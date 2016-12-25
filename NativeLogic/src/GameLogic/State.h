@@ -144,7 +144,7 @@ public:
 
 #pragma region Die state
 
-#define DIE_SOUND	_T("Resource//Soundtrack//Dead.wav")
+#define DIE_SOUND	_T("Resource//Soundtrack//Dead")
 
 class Die : public State
 {

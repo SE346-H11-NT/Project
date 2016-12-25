@@ -5,7 +5,7 @@
 #include "../Generic/GenericDatatype.h"
 
 #define ENABLE_TEXT	1
-#define ENABLE_SOUND 0
+#define ENABLE_SOUND 1
 #define ENDABLE_CONTROLLER 1
 
 #if ENABLE_TEXT

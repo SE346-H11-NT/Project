@@ -8,7 +8,7 @@
 #define BULLET_L_MOVE_SPEED		300
 #define BULLET_L_LATE_START		(-12)
 #define BULLET_L_ACTIVATE_TIME	DWORD activateTime[] = {0, 0, 15, 30}
-#define BULLET_L_SOUND			_T("Resource//SoundTrack//L.wav")
+#define BULLET_L_SOUND			_T("Resource//SoundTrack//L")
 
 class BulletLaser : public Bullet
 {

@@ -5,8 +5,8 @@
 #include "FreeSound.h"
 
 #define SCORE_BOSS	10000
-#define BOSS_DEAD_SOUND	_T("Resource//Soundtrack//BossExplode.wav")
-#define STAGE_CLEAR_SOUND	_T("Resource//Soundtrack//StageClear.wav")
+#define BOSS_DEAD_SOUND	_T("Resource//Soundtrack//BossExplode")
+#define STAGE_CLEAR_SOUND	_T("Resource//Soundtrack//StageClear")
 #define BOSS_DEAD_TIME	5000	// 5 seconds
 #define TIME_TO_NEXT_STAGE	9000	// 4 seconds after totally dead
 

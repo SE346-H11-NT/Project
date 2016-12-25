@@ -58,7 +58,7 @@ protected:
 #define DRAWPOS_KONAMI_LOGO		T6Vec3(81.0F, 222.0F, 0.0F)
 #define DRAWPOS_SELECT_ORDER	T6Vec3(40.0F, 96.0F, 0.0F)
 
-#define SOUND_MAINMENU_BACKGOUND	_T("Resource//Soundtrack//MainMenu.wav")
+#define SOUND_MAINMENU_BACKGOUND	_T("Resource//Soundtrack//MainMenu")
 
 class MainMenu : public GameState
 {

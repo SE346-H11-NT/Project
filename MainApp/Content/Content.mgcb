@@ -967,3 +967,69 @@
 /processorParam:TextureFormat=Compressed
 /build:Resource/font.spritefont
 
+#begin Resource/Soundtrack/BossExplode.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Resource/Soundtrack/BossExplode.wav
+
+#begin Resource/Soundtrack/Damaged.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Resource/Soundtrack/Damaged.wav
+
+#begin Resource/Soundtrack/Dead.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Resource/Soundtrack/Dead.wav
+
+#begin Resource/Soundtrack/Jungle.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Resource/Soundtrack/Jungle.wav
+
+#begin Resource/Soundtrack/L.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Resource/Soundtrack/L.wav
+
+#begin Resource/Soundtrack/M.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Resource/Soundtrack/M.wav
+
+#begin Resource/Soundtrack/MainMenu.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Resource/Soundtrack/MainMenu.wav
+
+#begin Resource/Soundtrack/S.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Resource/Soundtrack/S.wav
+
+#begin Resource/Soundtrack/SnowField.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Resource/Soundtrack/SnowField.wav
+
+#begin Resource/Soundtrack/StageClear.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Resource/Soundtrack/StageClear.wav
+
+#begin Resource/Soundtrack/Waterfall.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Resource/Soundtrack/Waterfall.wav
+
