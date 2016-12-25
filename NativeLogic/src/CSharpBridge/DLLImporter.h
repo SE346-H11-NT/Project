@@ -7,6 +7,9 @@
 #include "MonoTexture.h"
 #define WrappedTexture MonoWrapper::Graphic::MonoTexture
 
+#include "MonoText.h"
+#define WrappedText MonoWrapper::Graphic::MonoText
+
 #include "MonoKeyboard.h"
 #define WrappedKeyboard MonoWrapper::Controller::MonoKeyboard
 

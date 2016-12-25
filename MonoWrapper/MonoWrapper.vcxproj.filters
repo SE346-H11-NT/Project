@@ -38,6 +38,9 @@
     <ClInclude Include="include\MonoKeyboard.h">
       <Filter>Controller</Filter>
     </ClInclude>
+    <ClInclude Include="include\MonoText.h">
+      <Filter>Graphic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stdafx.cpp">
@@ -60,6 +63,9 @@
     </ClCompile>
     <ClCompile Include="src\MonoKeyboard.cpp">
       <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MonoText.cpp">
+      <Filter>Graphic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -81,7 +81,7 @@ T6Vec3 BulletSpread::generateBullet()
 void BulletSpread::draw()
 {
 	if (rendered_)
-		(*sprites_)->render(Timer::getRoundTime(), position_, ANGLE_NO, SCALE_A(((float)flydistance_ / RESOLUTION_WIDTH) / 3.0F + 0.75F),
+		(*sprites_)->render(Timer::getRoundTime(), position_, ANGLE_NO, SCALE_A((((float)flydistance_) / RESOLUTION_WIDTH) / 3.0F + 0.75F),
 		TRANSLATE_NO, DrawCenter::CENTER, COLOR_NO, bulletRS_, bulletRS_);
 }
 

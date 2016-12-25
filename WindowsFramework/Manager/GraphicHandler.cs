@@ -93,6 +93,7 @@ namespace WindowsFramework.Manager
         private GraphicHandler() {
             m_thisRef = this;
             MTexture.setGraphicHandler(ref m_thisRef);
+            MText.setGraphicHandler(ref m_thisRef);
         }
 
         static GraphicHandler m_instance = null;

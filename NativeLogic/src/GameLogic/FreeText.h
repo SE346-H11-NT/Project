@@ -11,9 +11,9 @@ public:
 
 	template <class T>
 	void drawText(const T& Content, T6Vec3 Position, T6Color Color = DEFAULT_FONT_COLOR,
-		int Size = DEFAULT_FONTSIZE, UINT DT_Type = DT_LEFT, bool converted = true)
+		int Size = DEFAULT_FONTSIZE, int DT_Type = DT_LEFT)
 	{
-		textHandler_->drawText(Content, Position, Color, Size, DT_Type, converted);
+		textHandler_->drawText(Content, Position, Color, Size, DT_Type);
 	}
 
 	static FreeText& get();

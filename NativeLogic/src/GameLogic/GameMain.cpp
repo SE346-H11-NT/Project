@@ -32,8 +32,6 @@ void GameMain::initialize()
 	T6_MergedTexture::initialize(Timer::getRoundCode, Timer::getRoundTime);
 	T6_Sprite::initialize(Timer::getRoundCode, Timer::getRoundTime);
 	GameState::initialize(GameMain::getInstance()->keyboard_);
-	SOUND_CODE(FreeSound::initialize(displayWindow_->getWindowHandler()));
-	TEXT_CODE(FreeText::initialize(displayWindow_->getD3DDevice(), displayWindow_->getSpriteHandler()));
 }
 
 void GameMain::release()

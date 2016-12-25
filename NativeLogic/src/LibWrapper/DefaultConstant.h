@@ -4,7 +4,7 @@
 #include <tchar.h>
 #include "../Generic/GenericDatatype.h"
 
-#define ENABLE_TEXT	0
+#define ENABLE_TEXT	1
 #define ENABLE_SOUND 0
 #define ENDABLE_CONTROLLER 1
 

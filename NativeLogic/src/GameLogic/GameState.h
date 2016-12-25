@@ -47,7 +47,7 @@ protected:
 #define MAIN_MENU_RESOURCE_BILL		(tstring(_T("Resource//Miscellaneous//BillAndLance")) + EXTENSION_PICTURE)
 #define MAIN_MENU_RESOURCE_CONTRA_LOGO	(tstring(_T("Resource//Miscellaneous//ContraLogo")) + EXTENSION_PICTURE)
 #define MAIN_MENU_RESOURCE_KONAMI_LOGO	(tstring(_T("Resource//Miscellaneous//KonamiLogo")) + EXTENSION_PICTURE)
-#define MAIN_MENU_LISENCE	_T("TM and © 2014\nUIT student's project\nMade by\nFrederick Tran of SE07")
+#define MAIN_MENU_LISENCE	_T("TM and (c) 2014\nUIT student's project\nMade by\nFrederick Tran of SE07")
 #define MAIN_MENU_SELECT_ORDER	_T("Play Select")
 #define MAIN_MENU_LISENCE_POS	T6Vec3(RESOLUTION_WIDTH / 2.0F, 48.0F, 0.0F)
 #define MAIN_MENU_SELECTION_POS		T6Vec3(56.0F, 80.0F, 0.0F)

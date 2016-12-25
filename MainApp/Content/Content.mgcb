@@ -1,7 +1,7 @@
 
 #----------------------------- Global Properties ----------------------------#
 
-/outputDir:bin/$(Platform)
+/outputDir:..\..\Debug
 /intermediateDir:obj/$(Platform)
 /platform:Windows
 /config:
@@ -960,4 +960,10 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Resource/BillAndLance.png
+
+#begin Resource/font.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Resource/font.spritefont
 

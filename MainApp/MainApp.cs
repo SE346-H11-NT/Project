@@ -57,6 +57,7 @@ namespace MainApp
         {
             // TODO: use this.Content to load your game content here
             nativeInitialize();
+            WindowsFramework.Graphic.MText.loadFont("Resource/font");
             //m_testingTexture = new MTexture("Resource\\BillAndLance");
         }
 
